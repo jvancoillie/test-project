@@ -1,0 +1,19 @@
+{
+    "devDependencies": {
+        "copy-webpack-plugin": "^4.3.0",
+        "lato-font": "^3.0.0",
+        "node-sass": "^4.5.3",
+        "patternfly": "^3.32.1",
+        "sass-loader": "^6.0.5",
+        "symfony-collection": "ninsuo/symfony-collection",
+        "webpack": "^3.10.0",
+        "webpack-sass-loaders": "^1.0.0",
+        "write-file-webpack-plugin": "^4.2.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev": "node_modules/.bin/webpack --config webpack.config.js --debug"
+    },
+    "dependencies": {}
+}

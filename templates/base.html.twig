@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr" class="{% block html_class %}{% endblock %}" >
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {#<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css">#}
+        {#<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css">#}
+                {##}
+        <link rel="stylesheet" type="text/css"
+              href="{{ asset('build/css/patternfly.min.css') }}">
+        <link rel="stylesheet" type="text/css"
+              href="{{ asset('build/css/patternfly-additions.min.css') }}">    
+    {% endblock %}
+    
+</head>
+<body class="cards-pf">
+    {% block menu %}{% endblock %}
+        {% block body %}
+        <!-- Just enjoy various PatternFly components -->
+        
+        <div class="alert alert-success">
+            <span class="pficon pficon-ok"></span>
+            <strong>Great job!</strong> This is really working out <a href="#" class="alert-link">great for us</a>.
+        </div>
+        {% endblock %}
+    {% block javascripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.18/c3.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.31.1/js/patternfly.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+        <script src="http://www.patternfly.org/assets/js/patternfly-site.min.js"></script>
+        <script>
+            (function ($) {
+                $(document).ready(function () {
+                    // Upon clicking the find button, show the find dropdown content
+                    $(".btn-find").click(function () {
+                        $(this).parent().find(".find-pf-dropdown-container").toggle();
+                    });
+                    // Upon clicking the find close button, hide the find dropdown content
+                    $(".btn-find-close").click(function () {
+                        $(".find-pf-dropdown-container").hide();
+                    });
+                });
+            })(jQuery);
+        </script>
+    {% endblock %}
+</body>
+</html>
