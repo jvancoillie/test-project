@@ -8,6 +8,9 @@
         {#<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css">#}
                 {##}
         <link rel="stylesheet" type="text/css"
+              href="{{ asset('build/css/app.css') }}">   
+        
+        <link rel="stylesheet" type="text/css"
               href="{{ asset('build/css/patternfly.min.css') }}">
         <link rel="stylesheet" type="text/css"
               href="{{ asset('build/css/patternfly-additions.min.css') }}">    
@@ -36,7 +39,12 @@
         <script src="http://www.patternfly.org/assets/js/patternfly-site.min.js"></script>
         <script>
             (function ($) {
+                
                 $(document).ready(function () {
+                    
+                    $('[data-toggle="tooltip"]').tooltip()
+                    
+                    
                     // Upon clicking the find button, show the find dropdown content
                     $(".btn-find").click(function () {
                         $(this).parent().find(".find-pf-dropdown-container").toggle();

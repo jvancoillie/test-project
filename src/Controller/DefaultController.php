@@ -22,21 +22,24 @@ class DefaultController
      */
     public function index(Environment $twig)
     {
-        return new Response($twig->render('default/index.html.twig'));
+        $version = 0;
+        for($i=0;$i<=6;$i+=2){
+            $version = $i * 10;
+        }
+        
+        return new Response($twig->render('default/home.html.twig', [ 'ma_valeur' => $version ]));
     }
 
-
     /**
-     * @Route("/test", name="test")
+     * @Route("/menu/horizontal", name="horizontal_menu")
      * @param Environment $twig
      *
      * @return Response
      */
-    public function test(Environment $twig)
+    public function horizontalMenu(Environment $twig)
     {
-        return new Response($twig->render('default/test.html.twig'));
+        return new Response($twig->render('default/horizontal_menu.html.twig'));
     }
-    
     
     /**
      * @Route("/menu/vertical", name="vertical_menu")

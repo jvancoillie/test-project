@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block html_class %}home-launcher{% endblock %}
+
+
+{% block body %}
+<div class="vertical-center" >
+    <div class="container">
+        <div class="home-launcher">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="page-header"> Mon application demo <sup>{{ ma_valeur }}</sup></h1>
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+               
+                <div class="col-md-4 col-sm-4">
+                    <div class="feature-center animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="fa fa-eyedropper"></i>
+						</span>
+                        <h3>Menu horizontal</h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem
+                            provident. Odit ab aliquam dolor eius.</p>
+                        <p><a href="{{ path('horizontal_menu') }}" class="btn btn-default">Fonctionnalité 1</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="feature-center animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="fa fa-diamond"></i>
+						</span>
+                        <h3>Menu vertical</h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem
+                            provident. Odit ab aliquam dolor eius.</p>
+                        <p><a href="{{ path('vertical_menu') }}" class="btn btn-default">Fonctionnalité 2</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="feature-center animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="fa fa-dashboard"></i>
+						</span>
+                        <h3>Autre entrée applicative</h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem
+                            provident. Odit ab aliquam dolor eius.</p>
+                        <p><a href="#" class="btn btn-default">Fonctionnalité 3</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+{% endblock body %}
